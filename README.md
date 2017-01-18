@@ -1,6 +1,8 @@
 cordova-imagePicker
 ===================
 
+Forked from: [wymsee/cordova-imagePicker](https://github.com/wymsee/cordova-imagePicker)
+
 Cordova Plugin For Multiple Image Selection - implemented for iOS and Android 4.0 and above.
 
 This fork has the following merged into master:
