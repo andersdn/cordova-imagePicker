@@ -21,8 +21,8 @@ public class GettingPermissionsActivity extends Activity {
         super.onCreate(savedInstanceState);
         builder = new AlertDialog.Builder(this);
         builder.setTitle("Attention");
-        builder.setMessage("Grant Storage Permission");
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        builder.setMessage("Please grant storage permission if prompted");
+        builder.setPositiveButton("CONTINUE", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -46,7 +46,7 @@ public class GettingPermissionsActivity extends Activity {
                 }
             }
         });
-        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
@@ -75,10 +75,10 @@ public class GettingPermissionsActivity extends Activity {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.show();
             builder.setTitle("Attention");
-            builder.setMessage("Grant Storage Permission");
+            builder.setMessage("Please grant storage permission if prompted");
             builder.setCancelable(false);
             builder.setNegativeButton(
-                    "NO",
+                    "CANCEL",
                     new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -87,7 +87,7 @@ public class GettingPermissionsActivity extends Activity {
                         }
                     });
             builder.setPositiveButton(
-                    "OK",
+                    "CONTINUE",
                     new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(final DialogInterface dialog, int which) {
